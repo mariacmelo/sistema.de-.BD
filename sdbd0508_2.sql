@@ -12,7 +12,7 @@ UPDATE carro SET modelo = 'Civic' WHERE id = 2;
 
 UPDATE vaga SET número = 'A102' WHERE id = 3;
 
-UPDATE tempo SET data_hora_saida = '2025-08-05 18:00:00' WHERE id = 4;
+UPDATE tempo SET data_hora_saida = '2025-08-05 18:00.000' WHERE id = 4;
 
 UPDATE carro SET vaga_id = 5 WHERE id = 5;
 
@@ -41,9 +41,9 @@ INSERT INTO vaga (número) VALUES
 ('18');
 
 INSERT INTO carro (marca, modelo, chassi, vaga_id) VALUES
-('Toyota', 'Corolla', 'A', '6'),
-('Honda', 'Civic', 'B', '7'),
-('Ford', 'Focus', 'C', '8'),
+('Toyota', 'Corolla', '7', '6'),
+('Honda', 'Civic', '9', '7'),
+('Ford', 'Focus', '5', '8'),
 ('Chevrolet', 'Onix', 'D',' 9'),
 ('Volkswagen', 'Golf', 'E', '10'),
 ('Fiat', 'Argo', 'F', '11'),
@@ -70,11 +70,15 @@ SELECT modelo FROM carro c
 
 SELECT marca FROM carro c
  INNER JOIN vaga v ON v.id = c.vaga_id
- WHERE v.numero = 1023;
+ WHERE v.numero = 10;
  
  SELECT data_hora_chegada FROM tempo t 
  INNER JOIN carro c ON c.id = t.carro_id
- WHERE t.carro_id = 14;
+ WHERE t.carro_id = 4;
+
+select * from tempo;
+
+
 
 
 
