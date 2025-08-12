@@ -1,1 +1,2 @@
-# sistema.de.BD
+# sistema de BD
+atividades feitas da UC
